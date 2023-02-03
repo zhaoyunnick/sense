@@ -20,8 +20,7 @@ from tools import directories
 from tools.sense_studio import utils
 
 MODEL_TEMPORAL_DEPENDENCY = 45
-MODEL_TEMPORAL_STRIDE = 4
-
+MODEL_TEMPORAL_STRIDE=5
 
 def set_internal_padding_false(module):
     """

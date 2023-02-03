@@ -25,6 +25,7 @@ from typing import Optional
 
 from docopt import docopt
 
+
 import sense.display
 from sense.controller import Controller
 from sense.downstream_tasks.action_recognition import INT2LAB

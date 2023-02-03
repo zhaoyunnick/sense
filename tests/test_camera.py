@@ -9,7 +9,6 @@ from sense.camera import uniform_frame_sample
 from sense.camera import VideoSource
 from sense.camera import VideoStream
 from sense.camera import VideoWriter
-
 VIDEO_PATH = os.path.join(os.path.dirname(__file__), 'resources', 'test_video.mp4')
 
 
