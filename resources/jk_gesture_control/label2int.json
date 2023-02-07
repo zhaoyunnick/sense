@@ -1,0 +1,11 @@
+{
+  "rotation-ccw": 0,
+  "rotation-cw": 1,
+  "shrink": 2,
+  "start": 3,
+  "swipe-down": 4,
+  "swipe-left": 5,
+  "swipe-right": 6,
+  "swipe-up": 7,
+  "zoom": 8
+}
