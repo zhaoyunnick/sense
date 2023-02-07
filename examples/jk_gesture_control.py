@@ -40,19 +40,13 @@ LABEL2INT = {
     "rotation-ccw": 0,
     "rotation-cw": 1,
     "shrink": 2,
-    "start(left-hand-side)": 3,
-    "start(right-hand-side)": 4,
-    "swipe-down(left-hand-side)": 5,
-    "swipe-down(right-hand-side)": 6,
-    "swipe-left(left-hand-side)": 7,
-    "swipe-left(right-hand-side)": 8,
-    "swipe-right(left-hand-side)": 9,
-    "swipe-right(right-hand-side)": 10,
-    "swipe-up(left-hand-side)": 11,
-    "swipe-up(right-hand-side)": 12,
-    "swipe-up-inv(left-hand-side)": 13,
-    "swipe-up-inv(right-hand-side)": 14,
-    "zoom": 15
+    "start": 3,
+    "swipe-down": 4,
+    "swipe-left": 5,
+    "swipe-right": 6,
+    "swipe-up": 7,
+    "swipe-up-inv": 8,
+    "zoom": 9
 }
 INT2LAB = {value: key for key, value in LABEL2INT.items()}
 
@@ -60,18 +54,12 @@ ENABLE_LAB = [
     "rotation-ccw",
     "rotation-cw",
     "shrink",
-    "start(left-hand-side)",
-    "start(right-hand-side)",
-    "swipe-down(left-hand-side)",
-    "swipe-down(right-hand-side)",
-    "swipe-left(left-hand-side)",
-    "swipe-left(right-hand-side)",
-    "swipe-right(left-hand-side)",
-    "swipe-right(right-hand-side)",
-    "swipe-up(left-hand-side)",
-    "swipe-up(right-hand-side)",
-    "swipe-up-inv(left-hand-side)",
-    "swipe-up-inv(right-hand-side)",
+    "start",
+    "swipe-down",
+    "swipe-left",
+    "swipe-right",
+    "swipe-up",
+    "swipe-up-inv",
     "zoom"
 ]
 LAB_THRESHOLDS = {key: 0.6 if key in ENABLE_LAB else 1. for key in LABEL2INT}
@@ -92,7 +80,7 @@ if __name__ == "__main__":
     backbone_model_weight = backbone_model_config.load_weights()['backbone']
 
     # load custom classifier
-    classifier = load_weights_from_resources('gesture_control_/checkpoints/ckt5/best_classifier.checkpoint')
+    classifier = load_weights_from_resources('jk_gesture_control/best_classifier.checkpoint')
 
     # update original weight in case some intermittent layers have been finned
     backbone_network = build_backbone_network(backbone_model_config, backbone_model_weight,
