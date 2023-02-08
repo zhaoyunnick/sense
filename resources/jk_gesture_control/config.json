@@ -2,13 +2,13 @@
   "backbone_name": "StridedInflatedEfficientNet",
   "backbone_version": "pro",
   "num_layers_to_finetune": 9,
-  "classifier": "LogisticRegression(\n  (0): Linear(in_features=1280, out_features=9, bias=True)\n)",
+  "classifier": "LogisticRegression(\n  (0): Linear(in_features=1280, out_features=10, bias=True)\n)",
   "temporal_training": false,
   "lr_schedule": {
     "0": 0.0001,
     "7": 1e-05
   },
   "num_epochs": 15,
-  "start_time": "2023-02-07 10:02:30.534700",
-  "end_time": "2023-02-07 10:23:56.393227"
+  "start_time": "2023-02-07 15:28:55.174943",
+  "end_time": "2023-02-07 15:54:39.695915"
 }

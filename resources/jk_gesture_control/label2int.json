@@ -7,5 +7,6 @@
   "swipe-left": 5,
   "swipe-right": 6,
   "swipe-up": 7,
-  "zoom": 8
+  "swipe-up-inv": 8,
+  "zoom": 9
 }

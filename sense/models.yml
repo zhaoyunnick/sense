@@ -14,6 +14,7 @@ StridedInflatedEfficientNet:
     gesture_control: gesture_control/sien_last_9_layers.ckpt
     met_converter: calorie_estimation/sien_met_converter.ckpt
     rep_counter: fitness_rep_counting/sien_logreg.ckpt
+    jk_gesture_control: jk_gesture_control/best_classifier.checkpoint
 
 StridedInflatedMobileNetV2:
 
