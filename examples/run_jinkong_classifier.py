@@ -45,16 +45,17 @@ SUPPORTED_MODEL_CONFIGURATIONS = [
 ]
 
 LABEL2INT = {
-    "rotation-ccw": 0,
-    "rotation-cw": 1,
-    "shrink": 2,
-    "start": 3,
-    "swipe-down": 4,
-    "swipe-left": 5,
-    "swipe-right": 6,
-    "swipe-up": 7,
-    "swipe-up-inv": 8,
-    "zoom": 9
+    "background": 0,
+    "rotation-ccw": 1,
+    "rotation-cw": 2,
+    "shrink": 3,
+    "start": 4,
+    "swipe-down": 5,
+    "swipe-left": 6,
+    "swipe-right": 7,
+    "swipe-up": 8,
+    "swipe-up-inv": 9,
+    "zoom": 10
 }
 INT2LABEL = {value: key for key, value in LABEL2INT.items()}
 
