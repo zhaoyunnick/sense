@@ -49,29 +49,54 @@ LABEL2INT = {
     "rotation-ccw": 1,
     "rotation-cw": 2,
     "shrink": 3,
-    "start": 4,
-    "swipe-down": 5,
-    "swipe-left": 6,
-    "swipe-right": 7,
-    "swipe-up": 8,
-    "swipe-up-inv": 9,
-    "zoom": 10
+    "start(left-hand-side)": 4,
+    "start(right-hand-side)": 5,
+    "swipe-down(left-hand-side)": 6,
+    "swipe-down(right-hand-side)": 7,
+    "swipe-left(left-hand-side)": 8,
+    "swipe-left(right-hand-side)": 9,
+    "swipe-right(left-hand-side)": 10,
+    "swipe-right(right-hand-side)": 11,
+    "swipe-up(left-hand-side)": 12,
+    "swipe-up(right-hand-side)": 13,
+    "swipe-up-inv(left-hand-side)": 14,
+    "swipe-up-inv(right-hand-side)": 15,
+    "zoom": 16
 }
 INT2LABEL = {value: key for key, value in LABEL2INT.items()}
 
 ENABLE_LAB = [
+
+#    "rotation-ccw",
+#    "rotation-cw",
+#    "shrink",
+#    "start",
+#    "swipe-down",
+#    "swipe-left",
+#    "swipe-right",
+#    "swipe-up",
+#    "swipe-up-inv",
+#    "zoom"
+
+    
     "rotation-ccw",
     "rotation-cw",
     "shrink",
-    "start",
-    "swipe-down",
-    "swipe-left",
-    "swipe-right",
-    "swipe-up",
-    "swipe-up-inv",
+    "start(left-hand-side)",
+    "start(right-hand-side)",
+    "swipe-down(left-hand-side)",
+    "swipe-down(right-hand-side)",
+    "swipe-left(left-hand-side)",
+    "swipe-left(right-hand-side)",
+    "swipe-right(left-hand-side)",
+    "swipe-right(right-hand-side)",
+    "swipe-up(left-hand-side)",
+    "swipe-up(right-hand-side)",
+    "swipe-up-inv(left-hand-side)",
+    "swipe-up-inv(right-hand-side)",
     "zoom"
 ]
-LAB_THRESHOLDS = {key: 0.8 if key in ENABLE_LAB else 1. for key in LABEL2INT}
+LAB_THRESHOLDS = {key: 0.9 if key in ENABLE_LAB else 1. for key in LABEL2INT}
 
 def run_jinkong(model_name: str,
                         model_version: str,
@@ -117,6 +142,7 @@ def run_jinkong(model_name: str,
             out_key='counting',
         ),
     ]
+
 
     border_size_top = 0
     border_size_right = 500
